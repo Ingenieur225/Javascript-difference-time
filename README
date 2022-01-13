@@ -1,0 +1,10 @@
+convertDuration(time) {
+    let seconds = ((new Date() - new Date(time)) / 1000).toFixed(0);
+    let minutes = ((new Date() - new Date(time)) / (1000 * 60)).toFixed(0);
+    let hours = ((new Date() - new Date(time)) / (1000 * 60 * 60)).toFixed(0);
+    let days = ((new Date() - new Date(time)) / (1000 * 60 * 60 * 24)).toFixed(0);
+    if (seconds < 60) return seconds + " s";
+    else if (minutes < 60) return minutes + " mn";
+    else if (hours < 24) return hours + " hr";
+    else return days + " jr"
+},
